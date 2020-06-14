@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>爱追星的丫头</title>
+        <style>
+        	*{
+        		padding: 0;
+            	margin: 0;
+        	}
+        	div{
+        		display:block;
+        		padding:0;
+        	}
+        	.first{
+        		z-index:9;
+        	}
+        	.container{
+        		position:relative;
+        		height:95px;
+			}
+			.sougou{
+				position:relative;
+				width:940px;
+				margin:0 auto;
+				padding:17px 0 25px;
+				clear:both;
+				z-index:2;
+				font-size:12px;
+			}
+			/*.logo {
+            float: left;
+            /*display:block;
+            width:140px;
+            height:34px;
+			zoom:1;
+			position:relative;
+        	}*/
+        	.sougoubaike{
+        		float:left;
+        		margin:15px 11px 0 0;
+        		display:block;
+        		height:36px;
+        		position:relative;
+        	}
+        	/*.logo>img {
+            	
+				position:relative;
+        	}*/
+        	.topnavbox{
+        		border-top:1px solid #e5e5e5;
+        		border-bottom:1px solid #e5e5e5;
+        		zoom:1;
+        	}
+        	.topnav{
+        		height:25px;
+        		padding-left:10px;
+        		font-family:tahoma,arial;
+        		line-height:25px;
+				border-bottom:1px solid #fff;
+				background:#F5F5F5F5;
+        	}
+        	.topnav li{
+        		float:left;
+        		width:51px;
+        		text-align:center;
+				
+        	}
+        	.topnav li.baike{
+        		position:relative;
+        		height:26px;
+        		margin-bottom: -2px;
+        		border-right:1px solid #e5e5e5;
+        		border-left:1px solid #fff;
+        		color:#FF0000;
+        	}
+        	.search{
+				float:left;
+				position:relative;
+				margin:16px 5px 5px 0;
+			}
+        	ul{
+        		display:block;
+        		margin-block-start:1em;
+        		margin-block-end: 1em;
+        		margin-inline-start:0px;
+        		margin-inline-end:0px;
+        		padding-inline-start:40px;
+        		list-style-type:none;
+        	}
+        	a{
+    			text-decoration:none;
+    			font-size:12px;
+    			color:#000000;
+			}
+			form{
+				display:block;
+				font-size:12px;
+			}
+			input{
+				text-rendering:auto;
+				letter-spacing:normal;
+				word-spacing:normal;
+				text-transform:none;
+				text-indent:0px;
+				text-shadow:none;
+				display:inline-block;
+				text-align:start;
+				margin:0;
+				padding:0;
+				position:absolute;
+			}
+			i{
+				font-size:1em;
+				font-style:normal;
+			}
+			.sousuo{
+				display:none;
+				font-size:12px;
+				position:absolute;
+			}
+			.query{
+				float:left;
+				width:421px;
+				margin:0;
+				height:30px;
+				overflow:hidden;
+				color:#9a9a9a;
+				padding:0 35px 0 33px;
+				line-height:30px;
+				border:1px solid #cfcfcf;
+				border-right:none;
+				font-family:Arial;
+				font-size:16px;
+				outline:0;
+				background-position:-125px -20px;
+				position:absolute;
+			}
+			.btn{
+				background-position:0 0;
+				margin-right:10px;
+				float:left;
+				width:110px;
+				height:32px;
+				border:0 none;
+				font-size:15px;
+				color:#333;
+				position:absolute;
+				margin-left:561px;
+				text-align:center;
+			}
+			.btn1{
+				background-position:0 -32px;
+				float:left;
+				width:110px;
+				height:32px;
+				cursor:pointer;
+				border:0 none;
+				font-size:15px;
+				color:#333;
+				position:absolute;
+				margin-left:450px;
+				text-align:center;
+			}
+			.btn2{
+				border:1px solid #d4d4d4;
+				border-top:none;
+				background:#fff;
+				font-size:14px;
+				width:489px;
+				z-index:100;
+				position:absolute;
+				top:32px;
+				left:0;
+
+			}
+			.clear{
+				position:absolute;
+				display:block;
+				top:9px;
+				right:240px;
+				width:14px;
+				height:14px;
+				background-position:-136px 0;
+			}
+			.daohang{
+				height:48px;
+				background:#434458;
+				font-size:12px;
+			}
+			.sub{
+				position:relative;
+			}
+			.daohang li{
+				float:left;
+			}
+			.daohang li .subnav{
+				top:48px;
+				right:0;
+				display:none;
+				position:absolute;
+				left:0;
+				box-shadow:0 0 5px rgba(0,0,0,.2);
+				font-size:12px;
+			}
+			.daohang li .last{
+				background-position:0 1000px;
+			}
+			.daohang li a{
+				font-size:16px;
+				font-weight:700;
+				line-height:48px;
+				height:48px;
+				width:auto;
+				padding:0 30px;
+				background:0 0;
+				display:block;
+				text-decoration:none;
+				color:#fff;
+			}
+			.daohang .user{
+				margin-left: 550px;
+			}
+			.youyi{
+				margin-left: 100px;
+			}
+			/*.xiangguansousuo{
+				height:30px;
+				margin-left: 250px;
+			}
+			.xgss{
+				height:50px;
+				text-align:bottom;
+				font-size:18px;
+			}*/
+			.lemma{
+				clear:both;
+				margin:30px 35px;
+				zoom:1;
+				font-size:12px;
+			}
+			.lemma .xiangguan{
+				margin-bottom: 15px;
+				padding-bottom:5px;
+				border-bottom:1px solid #eee;
+				zoom:1;
+				font-size:12px;
+			}
+			.content{
+
+			}
+        	.content h2{
+        		font-size: 14px;
+   				margin-bottom: 10px;
+        	}
+        	h2{
+        		display: block;
+    
+    			margin-block-start: 1em;
+    			margin-block-end: 1em;
+    			margin-inline-start: 0px;
+    			margin-inline-end: 0px;
+    			
+        	}
+			.album{
+				height:195px;
+				
+				float:left;
+				position:relative;
+				margin:0 auto;
+				overflow:hidden;
+			}
+			
+			
+			.album ul{
+				position:relative;
+				top:0;
+				zoom:1;
+			}
+			 li{
+				text-align:center;
+			}
+			.xz{
+				position:relative;
+			}
+			.container>ul>li{
+        		list-style:none;
+        		float:left;
+        		margin-left:12px;
+        		margin-bottom:12px;
+        		border:1px solid #FFFFFF;
+        		width:250px;
+        		height:300px;
+        	}
+        	.container{
+        		width:900px;
+        		margin-left: 150px;
+        		margin-top:95px;
+        	}
+        	.red{
+        		background-color:#A9A9A9;
+			
+        	}
+        	.red li{
+        	width:160px;
+            height:20px;
+            text-align:center;
+            line-height:20px;	
+        	}
+        	.red ul{
+        		margin-left:1px;
+        	}
+        	.red>ul>li{
+        	float:left;
+            position:relative;	
+        	}
+        	.blue>li{
+        		
+        		text-align:left;
+
+        	}
+        	.right{
+        		float:left;
+        	}
+        	.fan{
+        		height:50px;
+        		position:absolute;
+
+        	}
+        	.sign{
+        		border:1px solid #1f9bd9;
+        		margin-top:7px;
+        		font-size:12px;
+        		padding:0 34px;
+        		background-color:#1f9bd9;
+        		display:inline-block;
+        		color:#fff;
+        		height:40px;
+        	}
+        	.wan{
+        		background:#38b549;
+        		display:inline-block;
+        		border-radius:0 0 0 0;
+        		height:40px;
+        		padding:0 34px;
+        		color:#fff;
+        		border:none;
+        		margin:0;
+        	}
+        	
+		</style>
+    </head>
+    <body>
+
+    	<div>
+    	<div class="topnavbox">
+    		<ul class="topnav">
+				<li>
+					<a href="http://www.chinanews.com/">新闻</a>
+				</li>
+				<li>
+					<a href="https://www.sogou.com/">网页</a>
+				</li>
+				<li>
+					<a href="https://weixin.sogou.com/">微信</a>
+				</li>
+				<li>
+					<a href="https://www.zhihu.com/signin?next=%2F">知乎</a>
+				</li>
+				<li>
+					<a href="https://pic.sogou.com/?p=&w=">图片</a>
+				</li>
+				<li>
+					<a href="https://v.sogou.com/?query=">视频</a>
+				</li>
+				<li>
+					<a href="https://mingyi.sogou.com/">明医</a>
+				</li>
+				<li>
+					<a href="https://translate.google.cn/">英文</a>
+				</li>
+				<li>
+					<a href="http://daohang.qq.com/?fr=shortcut">问问</a>
+				</li>
+				<li>
+					<strong>百科</strong>
+				</li>
+				<li>
+					<a href="http://daohang.qq.com/?fr=shortcut">更多</a>
+				</li>
+				
+    		</ul>
+    	</div>
+    	<br>
+    	<div class="container">
+    		<div class="sougou">
+    			<div class="logo">
+					<a href="https://www.sogou.com/" class="sougoubaike"></a>
+					<span>
+            			<img src="unify_logo_1@1x.png" alt="搜狗百科">
+            		</span>
+            	</div>
+            	<div id="citiao">
+            		<form method="post" name="Form" id="Form" class="search">
+            			<div class="sousuo">
+            				<input type="hidden" name="formids" value="">
+            				<input type="hidden" name="submitmode">
+            				<input type="hidden" name="submitname">
+            			</div>
+            			<input type="text" name="TextField_0" id="searchText" x-webkit-speech maxlength="100" autocomplete="off" showhelp="true" class="query">
+						<a class="clear j-search-reset" href="javascript:void(0);"></a>
+						<input type="submit" name="Submit_1" id="enterLemma" class="btn" value="搜索词条">
+						<input type="submit" name="Submit_2" id="searchLemma" class="btn1" value="搜索词条">
+						<input type="submit" name="Submit_2" id="searchLemma" class="btn1" value="快速登录">
+						<div id="divc" class="btn2" style="display: none;"></div>
+            		</form>
+            	</div>
+        		
+        	</div>
+
+    	</div>
+    	</div>
+    	<div id="main">
+			<div class="daohang">
+				<ul class="youyi">
+					<li>
+						<a href="https://baike.sogou.com/">首页</a>
+					</li>
+					<li class="sub">
+						<a href="https://baike.sogou.com/">精彩百科</a>
+						<div class="subnav">
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">知识图谱</a>
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">城市图谱</a>
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">城市图谱</a>
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">搞笑图谱</a>
+						</div>
+					</li>
+					<li class="sub">
+						<a href="https://baike.sogou.com/">粉丝任务</a>
+						<div class="subnav">
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">任务中心</a>
+						</div>
+					</li>
+					<li class="sub">
+						<a href="https://baike.sogou.com/">用户</a>
+						<div class="subnav">
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">boli团</a>
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">领域小组</a>
+							<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">热词团</a>
+						</div>
+					</li>
+					<li>
+						<a href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">公益百科</a>
+					</li>
+					<li>
+						<a class="last" href="https://baike.sogou.com/v106565805.htm?fromTitle=%E8%82%96%E6%88%98" target="blank">积分商城</a>
+					</li>
+					<li class="user">
+						<a href="https://baike.sogou.com/v106565805.htm?fromTitle=肖战">我的爱豆</a>
+					</li>
+					<br>
+				</ul>
+			</div>
+			<div>
+				<div class="lemma">
+					<div class="xiangguan">
+						<h1>猜你想找</h1>
+						<br>
+					</div>
+					<div>
+						<div class="content">
+							<h2>肖战图册集锦</h2>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div>
+		<div class="container">
+
+										<ul class="xz">
+											<li>
+												
+													<img src="xz.jpg" style width="250" height="300">
+													
+												
+											</li>
+											<li>
+												
+													<img src="xz(0).jpg" style width="250" height="300">
+												
+											</li>
+											<li>
+												
+													<img src="xz(1).jpg" style  width="250" height="300">
+												
+											</li>
+											<li>
+												
+													<img src="xz(2).jpg" style  width="250" height="300">
+												
+											</li>
+											<li>
+												
+													<img src="xz(3).jpg" style width="250" height="300">
+												
+											</li>
+											<li>
+												
+													<img src="xz(4).jpg" style width="250" height="300">
+												
+											</li>
+											
+											
+										</ul>
+		</div>
+		<div class="fan">
+			<div class="red">
+    		<div class="right">
+			<ul class="blue">
+				<li><a href="#">介绍&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+				<li><a href="#">大事记&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+				<li><a href="#">光影集锦&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+				<li><a href="#">电视剧作品&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+				<li><a href="#">电影作品&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+				<li><a href="#">音乐作品&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+				<li><a href="#">社会活动&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+					<li><a href="#"><strong>版权声明</strong>&nbsp;&nbsp;></a></li>
+					<ul>
+						<li><a href=""></a></li>
+					</ul>
+			</ul>
+			</div>
+			
+    	</div>						
+		</div>				
+    	
+    </body>
+</html>
